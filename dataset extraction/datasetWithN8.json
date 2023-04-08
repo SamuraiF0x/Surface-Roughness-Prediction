@@ -1,0 +1,514 @@
+[
+	{
+		"sampleId": "Sample1A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample2A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample3A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample4A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample5A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample6A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample7A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample8A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample9A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample10A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample11A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample12A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample13A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample14A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample15A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample16A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample17A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample18A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample19A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample20A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample21A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample22A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample23A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample24A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample25A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample26A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample27A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample28A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample29A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample30A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample31A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample32A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample33A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample34A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample35A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample36A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample37A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample38A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample39A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample40A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample41A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample42A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample43A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample44A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample45A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample46A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample47A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample48A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample49A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample50A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample51A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample52A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample53A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample54A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample55A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample56A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample57A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample58A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample59A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample60A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample61A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample62A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample63A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample64A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample65A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample66A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample67A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample68A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample69A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample70A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample71A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample72A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample73A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample74A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample75A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample76A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample77A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample78A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample79A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample80A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample81A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample82A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample83A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample84A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample85A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample86A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample87A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample88A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample89A",
+		"roughness": "N8"
+	},
+	{
+		"sampleId": "Sample90A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample91A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample92A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample93A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample94A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample95A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample96A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample97A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample98A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample99A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample100A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample101A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample102A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample103A",
+		"roughness": "N5"
+	},
+	{
+		"sampleId": "Sample104A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample105A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample106A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample107A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample108A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample109A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample110A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample111A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample112A",
+		"roughness": "N6"
+	},
+	{
+		"sampleId": "Sample113A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample114A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample115A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample116A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample117A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample118A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample119A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample120A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample121A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample122A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample123A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample124A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample125A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample126A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample127A",
+		"roughness": "N7"
+	},
+	{
+		"sampleId": "Sample128A",
+		"roughness": "N6"
+	}
+]
