@@ -1,77 +1,21 @@
-import os
-import json
 import numpy as np
-import cv2
-from preprocessImage import preprocessImage
+from loadImages import loadImages
+from generateImages import generateImages
 from sklearn.model_selection import train_test_split
 from keras.models import Sequential
 from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten
-from keras.preprocessing.image import ImageDataGenerator
-from keras.utils import to_categorical
 from keras.optimizers import Adam
+from keras.callbacks import EarlyStopping
 
-# Set the image size and channels
-img_size = 800
-img_channels = 1
+img_size, samples, labels, label_map = loadImages()
+augmented_samples, augmented_labels = generateImages(samples, labels)
 
-# Load the dataset
-with open("dataset.json", "r") as f:
-    data = json.load(f)
-
-# Define the mapping from string labels to integer values
-label_map = {label: i for i, label in enumerate(set([d["roughness"] for d in data]))}
-
-# Load the images and labels
-samples = []
-labels = []
-
-sampleCount = 0
-
-for d in data:
-    sample_id = d["sampleId"]
-    roughness = d["roughness"]
-    img_path = os.path.join("samples", sample_id + ".jpg")
-    img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)  # Load sample image
-
-    # Samples size info
-    sampleCount += 1  # Increment the count of samples
-    sampleSize = len(data)  # Number of samples
-
-    # Image augmentation & preprocessing
-    img = preprocessImage(img, img_size)
-
-    samples.append(img)
-    # Replace the string label with its corresponding integer value
-    labels.append(label_map[roughness])
-
-    # Preprocessing progress
-    print(f"... [{sampleCount}/{sampleSize}] images processed", end="\r")
-
-print(f"... [{sampleCount}/{sampleSize}] images were preprocessed successfully")
-
-# Convert the samples and labels to numpy arrays
-samples = np.array(samples)
-labels = np.array(labels)
-
-# Expand the dimensions of the samples array to include the channels dimension
-samples = np.expand_dims(samples, axis=-1)
-# Convert the labels to one-hot encoding
-labels = to_categorical(labels, len(label_map))
-
-# Assume samples and labels are your preprocessed data
-X_train, X_val, y_train, y_val = train_test_split(
-    samples, labels, test_size=0.2, stratify=labels
+x_train, x_val, y_train, y_val = train_test_split(
+    augmented_samples, augmented_labels, test_size=0.2, stratify=augmented_labels
 )
 
-# Define the data augmentation generator
-datagen = ImageDataGenerator(
-    rotation_range=90, horizontal_flip=True, vertical_flip=True
-)
-
-# Generate augmented images
-augmentedData = datagen.flow(X_train, y_train, batch_size=32)
-
-print("Number of generated images:", augmentedData.n * augmentedData.batch_size)
+print("[INFO] Number of samples used for training ...", len(x_train))
+print("[INFO] Number of samples used for validation ...", len(x_val))
 
 # Define the CNN architecture
 model = Sequential()
@@ -80,7 +24,7 @@ model.add(
         32,
         kernel_size=(3, 3),
         activation="relu",
-        input_shape=(img_size, img_size, img_channels),
+        input_shape=(img_size, img_size, 1),
     )
 )
 model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -96,20 +40,34 @@ model.compile(
     optimizer=Adam(learning_rate=0.001),
     metrics=["accuracy"],
 )
-# model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
 
-# Train the model with data augmentation
-history = model.fit(
-    augmentedData,
-    steps_per_epoch=len(X_train) / 32,
-    epochs=1,
-    validation_data=(X_val, y_val),
-)
+epochs = 1
+target_accuracy = 0.85
 
-print("... len(X_train) ...", len(X_train))
-print("... Saving surface roughness prediction model ...")
+# Define early stopping callback
+early_stop = EarlyStopping(monitor="val_accuracy", patience=3, verbose=1, mode="max")
 
+# Train the model with data augmentation and early stopping
+while True:
+    history = model.fit(
+        augmented_samples,
+        augmented_labels,
+        steps_per_epoch=len(x_train) // 32,
+        epochs=epochs,
+        validation_data=(x_val, y_val),
+        callbacks=[early_stop],
+    )
+
+    epochs += 1
+
+    print(f"[INFO] Current validation accuracy:", history.history["val_accuracy"][-1])
+
+    if history.history["val_accuracy"][-1] >= target_accuracy:
+        break
+
+print("[INFO] ... Saving surface roughness prediction model ...")
 # Save the model so it can be imported to
-model.save("roughness_classifier3.h5")
+model.save("roughness_classifier/roughness_classifier2.h5")
 
-print("... The surface roughness prediction model was built successfully")
+print("[INFO] The surface roughness prediction model was built SUCCESSFULLY")
+print("[INFO] Run predictRoughness to test the model")

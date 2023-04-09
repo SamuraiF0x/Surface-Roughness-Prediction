@@ -132,3 +132,5 @@ dmypy.json
 roughness_classifier
 old
 samples
+dataset extraction/Sample89AB
+preprocessed_img.jpg
