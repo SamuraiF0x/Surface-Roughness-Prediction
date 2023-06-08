@@ -35,3 +35,5 @@ Epoch 3/3
 [INFO] ... Saving surface roughness prediction model ...
 [INFO] The surface roughness prediction model was built SUCCESSFULLY
 [INFO] Run predictRoughness to test the model
+
+# Second moderately successful model
