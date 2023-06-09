@@ -1,4 +1,5 @@
 from loadImages import loadImages
+from saveOutputImages import saveOutputImages
 from generateImages import generateImages
 from sklearn.model_selection import train_test_split
 from keras.models import Sequential
@@ -8,8 +9,12 @@ from keras.callbacks import EarlyStopping
 from accuracyPlot import accuracyPlot
 
 print("[INFO] ... Initialising surface roughness prediction training model ...")
+
 # Load local images
 img_size, samples, labels, label_map = loadImages()
+
+saveOutputImages(samples)
+
 # Generate augmented images
 augmented_samples, augmented_labels = generateImages(samples, labels)
 
@@ -30,7 +35,7 @@ model.add(
         32,
         kernel_size=(3, 3),
         activation="relu",
-        input_shape=(img_size, img_size, 1),
+        input_shape=(img_size // 3, img_size // 3, 1),
     )
 )
 model.add(MaxPooling2D(pool_size=(2, 2)))

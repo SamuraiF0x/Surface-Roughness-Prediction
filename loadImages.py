@@ -9,7 +9,7 @@ from augmentImage import augmentImage
 
 def loadImages():
     # Set the image size
-    img_size = 800
+    img_size = 1024
 
     # Load the dataset
     with open("dataset.json", "r") as f:
@@ -41,7 +41,7 @@ def loadImages():
         sampleCount += 1  # Increment the count of samples
         sampleSize = len(data)  # Number of samples
 
-        # # Image preprocessing
+        # Image preprocessing
         img = preprocessImage(img)
 
         # Image preprocessing progress
