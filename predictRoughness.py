@@ -18,8 +18,8 @@ print("[INFO] Image was loaded successfully...")
 
 # Image augmentation & preprocessing
 print("[INFO] Processing image...")
-imgC = cropImage(img, img_size)
-img = preprocessImage(imgC)
+img = cropImage(img, img_size)
+img = preprocessImage(img)
 print("[INFO] Image was processed successfully...")
 
 # Add an extra dimension to match the shape of the training data
