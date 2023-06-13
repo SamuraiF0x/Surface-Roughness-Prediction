@@ -5,7 +5,9 @@ from keras.preprocessing.image import ImageDataGenerator
 def generateImages(samples, labels):
     # Define the data augmentation generator
     datagen = ImageDataGenerator(
-        rotation_range=90, horizontal_flip=True, vertical_flip=True, rescale=1 / 255
+        rotation_range=90,
+        horizontal_flip=True,
+        vertical_flip=True,
     )
 
     # Generate augmented images and append them to samples with the same labels
@@ -29,10 +31,6 @@ def generateImages(samples, labels):
             aug_sample = next(aug_iter)[0]
             augmented_samples.append(aug_sample)
             augmented_labels.append(label)
-            print(
-                f"[INFO] ... [{len(augmented_samples)}/{len(samples)*8}] images generated",
-                end="\r",
-            )
 
     # Convert the samples and labels to numpy arrays
     augmented_samples = np.array(augmented_samples)
