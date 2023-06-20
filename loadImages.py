@@ -4,7 +4,6 @@ import numpy as np
 import cv2
 from preprocessImage import preprocessImage
 from augmentImage import augmentImage
-from keras.utils import to_categorical
 
 
 def loadImages():
@@ -38,7 +37,7 @@ def loadImages():
         sampleSize = len(data)  # Number of samples
 
         # Image preprocessing
-        img = preprocessImage(img)
+        # img = preprocessImage(img)
 
         # Image preprocessing progress
         print(
@@ -55,9 +54,7 @@ def loadImages():
     samples = np.array(samples)
     labels = np.array(labels)
 
-    # # Expand the dimensions of the samples array to include the channels dimension
+    # Expand the dimensions of the samples array to include the channels dimension
     samples = np.expand_dims(samples, axis=-1)
-    # # Convert the labels to one-hot encoding
-    # labels = to_categorical(labels, len(label_map))
 
     return img_size, samples, labels, label_map

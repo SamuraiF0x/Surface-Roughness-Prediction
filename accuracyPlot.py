@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 
 def accuracyPlot(history, metric):
     plt.rcParams["font.size"] = 16
-    # plt.figure(figsize=(10, 8))
 
     plt.plot(
         history.history[metric],
@@ -18,7 +17,6 @@ def accuracyPlot(history, metric):
         linewidth=2,
     )
 
-    # plt.ylim((0, 1))
     plt.title(f"Model {metric}")
     plt.xlabel("Epochs")
     plt.ylabel("Loss" if metric == "loss" else "Accuracy")

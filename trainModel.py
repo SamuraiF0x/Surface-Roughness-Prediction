@@ -6,15 +6,12 @@ from accuracyPlot import accuracyPlot
 from sklearn.model_selection import train_test_split
 from keras.utils import to_categorical
 from keras.models import Sequential
-
-# from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten
 from keras.layers import (
     Dense,
     Conv2D,
     MaxPooling2D,
     Flatten,
     Dropout,
-    BatchNormalization,
 )
 from keras.optimizers import Adam
 from keras.callbacks import EarlyStopping
@@ -22,7 +19,7 @@ from keras.callbacks import EarlyStopping
 img_size, samples, labels, label_map = loadImages()
 img_size = img_size // 3
 
-saveOutputImages(samples, labels)
+# saveOutputImages(samples, labels)
 
 # Generate augmented images
 augmented_samples, augmented_labels = generateImages(samples, labels)
@@ -52,24 +49,19 @@ y_val = to_categorical(y_val)
 # Define the CNN architecture
 model = Sequential()
 
-# 1
 model.add(
     Conv2D(
         16, kernel_size=(3, 3), activation="relu", input_shape=(img_size, img_size, 1)
     )
 )
-# model.add(BatchNormalization())
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Dropout(0.25))
 
 model.add(Conv2D(32, kernel_size=(3, 3), activation="relu"))
-# model.add(BatchNormalization())
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Dropout(0.5))
-# model.add(Dense(64, activation="relu"))
 
 model.add(Conv2D(64, kernel_size=(3, 3), activation="relu"))
-# model.add(BatchNormalization())
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Dropout(0.25))
 
@@ -87,7 +79,6 @@ model.compile(
 epochs = 100
 
 # Define early stopping callback
-# early_stop = EarlyStopping(monitor="val_accuracy", patience=3, verbose=1, mode="max")
 early_stop = EarlyStopping(
     monitor="val_loss", patience=3, verbose=1, mode="min", restore_best_weights=True
 )
