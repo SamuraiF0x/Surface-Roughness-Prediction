@@ -13,7 +13,7 @@ label_map = {0: "N5", 1: "N6", 2: "N7"}
 
 # Load the test image
 print("[INFO] Loading test image...")
-img = cv2.imread("samples/Sample20A.jpg", cv2.IMREAD_GRAYSCALE)
+img = cv2.imread("samples/Sample9B.jpg", cv2.IMREAD_GRAYSCALE)
 print("[INFO] Image was loaded successfully...")
 
 # Image augmentation & preprocessing
@@ -34,7 +34,7 @@ img = np.expand_dims(img, axis=-1)
 
 # Load the saved model
 print("[INFO] Loading surface roughness prediction model...")
-model = load_model("roughness_classifier/roughness_classifier5.h5")
+model = load_model("roughness_classifier/roughness_classifier10.h5")
 print("[INFO] The surface roughness prediction model was loaded successfully...")
 
 print("[INFO] Predicting surface roughness...")

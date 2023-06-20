@@ -41,7 +41,8 @@ def loadImages():
         img = preprocessImage(img)
 
         # Image preprocessing progress
-        print(f"[INFO] ... [{sampleCount}/{sampleSize}] images processed", end="\r")
+        print(
+            f"[INFO] ... [{sampleCount}/{sampleSize}] images processed", end="\r")
 
         # Image augmentation
         samples, labels = augmentImage(
