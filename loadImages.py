@@ -37,7 +37,7 @@ def loadImages():
         sampleSize = len(data)  # Number of samples
 
         # Image preprocessing
-        # img = preprocessImage(img)
+        img = preprocessImage(img)
 
         # Image preprocessing progress
         print(
