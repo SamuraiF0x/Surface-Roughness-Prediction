@@ -13,13 +13,12 @@ label_map = {0: "N5", 1: "N6", 2: "N7"}
 
 # Load the test image
 print("[INFO] Loading test image...")
-img = cv2.imread("samples/Sample9B.jpg", cv2.IMREAD_GRAYSCALE)
+img = cv2.imread("samples/Sample1A.jpg", cv2.IMREAD_GRAYSCALE)
 print("[INFO] Image was loaded successfully...")
 
 # Image augmentation & preprocessing
 print("[INFO] Processing image...")
 img = preprocessImage(img)
-# img = cropImage(img, img_size)
 cropped_size = img_size // 3
 first = cropped_size
 mid = 2 * cropped_size
