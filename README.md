@@ -40,11 +40,11 @@ Epoch 3/3
 
 If both accuracy and validation accuracy are above 80% and the loss and validation loss are below 1, it generally indicates that your model is performing well on the task of predicting surface roughness based on images.
 
-An accuracy above 80% suggests that your model is making correct predictions for a significant portion of the dataset, which is a positive outcome. Similarly, having both loss and validation loss below 1 indicates that your model's predictions are relatively close to the ground truth values, as the loss represents the discrepancy between predicted and actual values.
+An accuracy above 80% suggests that model is making correct predictions for a significant portion of the dataset, which is a positive outcome. Similarly, having both loss and validation loss below 1 indicates that model's predictions are relatively close to the ground truth values, as the loss represents the discrepancy between predicted and actual values.
 
-However, it's important to consider the specific context and requirements of your application. The definition of a "good" accuracy or loss depends on the problem at hand and the level of precision needed in your predictions. In some scenarios, an accuracy of 80% might be acceptable, while in others, higher levels of accuracy may be required.
+However, it's important to consider the specific context and requirements of your application. The definition of a "good" accuracy or loss depends on the problem at hand and the level of precision needed in predictions. In some scenarios, an accuracy of 80% might be acceptable, while in others, higher levels of accuracy may be required.
 
-Since you're predicting surface roughness based on images, it's crucial to evaluate the model's performance on unseen data and consider other metrics or factors that might be relevant for your specific use case. Additionally, you may want to validate the model's performance on a separate test dataset to ensure that it generalizes well and is not overfitting to the training or validation data.
+Since predicting surface roughness based on images, it's crucial to evaluate the model's performance on unseen data and consider other metrics or factors that might be relevant for specific use case. Additionally, it may be desirable to validate the model's performance on a separate test dataset to ensure that it generalizes well and is not overfitting to the training or validation data.
 
 In summary, achieving an accuracy above 80%, having loss and validation loss below 1, and considering the context of surface roughness prediction from images are positive indications, but further evaluation and validation are recommended to ensure the model's effectiveness in practical scenarios.
 
